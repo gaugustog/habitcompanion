@@ -1,0 +1,30 @@
+# This "input" configures a global authorization rule to enable public access to
+# all models in this schema. Learn more about authorization rules here: https://docs.amplify.aws/cli/graphql/authorization-rules
+input AMPLIFY { globalAuthRule: AuthRule = { allow: public } } # FOR TESTING ONLY!
+
+type Habit @model {
+  id: ID! @primaryKey(sortKeyFields: ["createdAt"])
+  title: String!
+  description: String
+  createdAt: AWSDateTime!
+  streak: Int
+  habitDays: [Day] @manyToMany(relationName: "HabitsLogs")
+  habitWeekDays: [Int]
+  user: User @belongsTo(fields: ["userId"])
+  userId: ID! @index(sortKeyFields: ["createdAt"],queryField: "userByCreatedAt")
+}
+
+type Day @model {
+  id: ID! @primaryKey(sortKeyFields: ["date"])
+  date: AWSDateTime! 
+  dayHabits: [Habit] @manyToMany(relationName: "HabitsLogs")
+  user: User! @belongsTo(fields: ["userId"])
+  userId: ID! @index(sortKeyFields: ["date"],queryField: "userByDate")
+}
+
+type User @model {
+  id: ID!
+  username: String!
+  habits: [Habit] @hasMany
+  days: [Day] @hasMany
+}

@@ -1,0 +1,41 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-habitcompanion-dev-173844-authRole",
+      "UnauthRoleArn": "arn:aws:iam::316884453263:role/amplify-habitcompanion-dev-173844-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::316884453263:role/amplify-habitcompanion-dev-173844-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-habitcompanion-dev-173844-deployment",
+      "UnauthRoleName": "amplify-habitcompanion-dev-173844-unauthRole",
+      "StackName": "amplify-habitcompanion-dev-173844",
+      "StackId": "arn:aws:cloudformation:us-east-1:316884453263:stack/amplify-habitcompanion-dev-173844/e2659470-4f50-11ee-8dae-0e21c9e20e1b",
+      "AmplifyAppId": "d2e2gy4hd89yj5"
+    },
+    "categories": {
+      "api": {
+        "habitcompanionapi": {}
+      },
+      "auth": {
+        "habitcompanion7a1258e3": {}
+      }
+    }
+  },
+  "prd": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-habitcompanion-prd-182707-authRole",
+      "UnauthRoleArn": "arn:aws:iam::316884453263:role/amplify-habitcompanion-prd-182707-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::316884453263:role/amplify-habitcompanion-prd-182707-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-habitcompanion-prd-182707-deployment",
+      "UnauthRoleName": "amplify-habitcompanion-prd-182707-unauthRole",
+      "StackName": "amplify-habitcompanion-prd-182707",
+      "StackId": "arn:aws:cloudformation:us-east-1:316884453263:stack/amplify-habitcompanion-prd-182707/b0744a50-a9b5-11ee-9643-0a722d2ab069",
+      "AmplifyAppId": "d2e2gy4hd89yj5"
+    },
+    "categories": {
+      "auth": {
+        "habitcompanion7a1258e3": {}
+      }
+    }
+  }
+}
